@@ -22,6 +22,7 @@ plt.title("Waveform of Test Audio")
 
 car_ft = np.fft.fft(sound)
 
+
 def plot_magnitude_spectrum(signal, title, sr, f_ratio=1):  # sr-->sampling_rate
     ft = np.fft.fft(signal)
     magnitude_spectrum = np.abs(ft)
@@ -38,5 +39,5 @@ def plot_magnitude_spectrum(signal, title, sr, f_ratio=1):  # sr-->sampling_rate
 
     plt.show()
 
-plot_magnitude_spectrum(sound, "Car", sampFreq, 0.1)
 
+plot_magnitude_spectrum(sound, "Car", sampFreq, 0.1)

@@ -1,14 +1,15 @@
 
 import speech_recognition as sr
 import os
+from ..main import unstemmedtextoutput
 
 class audio_to_text:
 
     r = sr.Recognizer()
     
-    save_path = 'C:/Users/Rahul/Desktop/NLP/audiototext/output'
-    name = 'unstemmedtextoutput'
-    completeName = os.path.join(save_path, name)
+    # save_path = 'C:/Users/Rahul/Desktop/NLP/audiototext/output'
+    # name = 'unstemmedtextoutput'
+    # completeName = os.path.join(save_path, name)
 
     def text_creator(self, audio):
         with sr.AudioFile(audio) as source:
@@ -19,7 +20,7 @@ class audio_to_text:
             except:
                 print('Sorry.. try again...')
 
-        with open(self.completeName, 'a') as file1:
+        with open(unstemmedtextoutput, 'a') as file1:
             file1.write(f"{text}\n")
             file1.close()
         

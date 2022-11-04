@@ -1,7 +1,6 @@
-scipy
-nltk
-python==3.9
-streamlit
-numpy
-matplotlib
-SpeechRecognition
+scipy==1.9.1
+nltk==3.7
+streamlit==0.62.0
+numpy==1.21.5
+matplotlib==3.5.3
+SpeechRecognition==3.8.1
