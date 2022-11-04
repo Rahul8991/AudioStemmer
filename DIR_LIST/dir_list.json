@@ -1,0 +1,15 @@
+{
+    "0": {
+        "BASE_DIR": "C:/Users/Rahul/Desktop/NLP",
+        "STEMMED_TEXT_OUTPUT": os.path.join(BASE_DIR, 'stemming/output')
+"UNSTEMMED_TEXT_OUTPUT": os.path.join(BASE_DIR, 'audiototext/output')
+"AUDIO_INPUT": os.path.join(BASE_DIR, 'audio')
+"AUDIO_OUTPUT": os.path.join(BASE_DIR, 'stemmedaudio')
+    }
+
+BASE_DIR = 'C:/Users/Rahul/Desktop/NLP'
+STEMMED_TEXT_OUTPUT = os.path.join(BASE_DIR, 'stemming/output')
+UNSTEMMED_TEXT_OUTPUT = os.path.join(BASE_DIR, 'audiototext/output')
+AUDIO_INPUT = os.path.join(BASE_DIR, 'audio')
+AUDIO_OUTPUT = os.path.join(BASE_DIR, 'stemmedaudio')
+}

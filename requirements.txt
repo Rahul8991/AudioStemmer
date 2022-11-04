@@ -1,0 +1,7 @@
+scipy
+nltk
+python==3.9
+streamlit
+numpy
+matplotlib
+SpeechRecognition
