@@ -4,7 +4,6 @@ from nltk.stem import PorterStemmer
 import nltk
 import os
 import json
-from ..main import unstemmedtextoutput, stemmedtextoutput
 # nltk.download()
 
 
@@ -21,17 +20,19 @@ class word_stemmer:
         return ''.join(stem_sentence)
 
 
-# save_path = r'C:/Users/Rahul/Desktop/NLP/audiototext/output'
+# save_path = r'C:/Users/{userName}/Desktop/NLP/audiototext/output'
 # name = 'unstemmedtextoutput'
 # unstemmedtextoutput = os.path.join(save_path, name)
 
-# DIR = r'C:/Users/Rahul/Desktop/NLP/stemming/output'
+# DIR = r'C:/Users/{userName}/Desktop/NLP/stemming/output'
 # filname = 'stemmedtextoutput'
 # stemmedtextoutput = os.path.join(DIR, filname)
-def stemIt():
+def stemIt(unstemmedtextoutput, stemmedtextoutput):
+    print("Stemming Process Started...")
     line_list = []
     ws1 = word_stemmer()
 
+    print("Reading from Unstemmed text file...")
     with open(unstemmedtextoutput, 'r') as file:
         for lines in enumerate(file):
             line_list.append(lines[1].strip('\n'))
@@ -39,5 +40,17 @@ def stemIt():
     for sentence in line_list:
         x = ws1.stemSentence(sentence)
         with open(stemmedtextoutput, 'a') as f:
-            f.write(f"{x}\n")
-            f.close()
+            answer = input("Do you want to retain old data? (Yes/No) ")
+            if answer == 'Yes':
+                print("Writing To Stemmed File...")
+                f.write(f"{x}\n")
+            else:
+                print("Erasing...")
+                f.truncate(0)
+                print("Writing To Stemmed File...")
+                f.write(f"{x}\n")
+
+    file.close()
+    print("Closing File(Unstemmed)")
+    f.close()
+    print("Closing File(Stemmed)")

@@ -1,17 +1,20 @@
 
 import speech_recognition as sr
 import os
-from ..main import unstemmedtextoutput
+import sys
+import json
+
 
 class audio_to_text:
 
     r = sr.Recognizer()
-    
-    # save_path = 'C:/Users/Rahul/Desktop/NLP/audiototext/output'
+
+    # save_path = 'C:/Users/{userName}/Desktop/NLP/audiototext/output'
     # name = 'unstemmedtextoutput'
     # completeName = os.path.join(save_path, name)
 
-    def text_creator(self, audio):
+    def text_creator(self, audio, unstemmedtextoutput):
+        print("Audio to Text Conversion Started...")
         with sr.AudioFile(audio) as source:
             audio_text = self.r.listen(source)
             try:
@@ -21,6 +24,16 @@ class audio_to_text:
                 print('Sorry.. try again...')
 
         with open(unstemmedtextoutput, 'a') as file1:
-            file1.write(f"{text}\n")
-            file1.close()
-        
+            answer = input("Do you want to retain old data? (Yes/No) ")
+            if answer == 'Yes':
+                print("Writing to File Started...")
+                file1.write(f"{text}\n")
+                print("Closing File(Unstemmed)...")
+                file1.close()
+            else:
+                print("Erasing...")
+                file1.truncate(0)
+                print("Writing to File Started...")
+                file1.write(f"{text}\n")
+                print("Closing File(Unstemmed)...")
+                file1.close()
