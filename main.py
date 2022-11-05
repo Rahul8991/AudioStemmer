@@ -3,6 +3,7 @@
 import os
 from audiototext.audiototext import audio_to_text
 from stemming.textstemmer import stemIt
+from sentimentanalysis.sentiment import sentiment_calculator
 import json
 
 
@@ -20,6 +21,9 @@ def main():
     unstemmedtextoutput = f"{BASE_DIR}/{json_dict['0']['UNSTEMMED_TEXT_OUTPUT']}/unstemmedtextoutput"
     stemmedtextoutput = f"{BASE_DIR}/{json_dict['0']['STEMMED_TEXT_OUTPUT']}/stemmedtextoutput"
     audiooutput = f"{BASE_DIR}/{json_dict['0']['AUDIO_OUTPUT']}"
+    positivewords = f"{BASE_DIR}/{json_dict['0']['WORDS_LIST']}/positive_words"
+    negativewords = f"{BASE_DIR}/{json_dict['0']['WORDS_LIST']}/negative_words"
+
     print("Path generated...")
     try:
         # audio_file = open(audio_file, 'rb')
@@ -54,6 +58,11 @@ def main():
         stemIt(unstemmedtextoutput, stemmedtextoutput)
         print("Stemming Process Finished...")
         print("---------------------------------------------------")
+
+        print("-----------------Sentiment Analysis--------------------")
+        sentiment_calculator(positivewords, negativewords, stemmedtextoutput)
+        print("Sentiment Analysis Finished...")
+        print("-------------------------------------------------")
     except Exception as e:
         print("Audio File Error!")
         print(e)

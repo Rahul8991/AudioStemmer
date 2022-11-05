@@ -7,7 +7,7 @@ import os
 plt.rcParams['figure.dpi'] = 100
 plt.rcParams['figure.figsize'] = (9, 7)
 
-BASE_DIR = r"C:/Users/Rahul/Desktop/NLP/stemming/"
+BASE_DIR = r"C:/Users/Rahul/Desktop/NLP/audio/"
 car_file = "car.wav"
 
 audio_file = os.path.join(BASE_DIR, car_file)

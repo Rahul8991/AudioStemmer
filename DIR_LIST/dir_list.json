@@ -3,6 +3,7 @@
         "STEMMED_TEXT_OUTPUT": "stemming/output",
         "UNSTEMMED_TEXT_OUTPUT": "audiototext/output",
         "AUDIO_INPUT": "audio",
-        "AUDIO_OUTPUT": "stemmedaudio"
+        "AUDIO_OUTPUT": "stemmedaudio",
+        "WORDS_LIST": "sentimentanalysis/files"
     }
 }

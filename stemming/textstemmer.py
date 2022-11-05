@@ -37,17 +37,19 @@ def stemIt(unstemmedtextoutput, stemmedtextoutput):
         for lines in enumerate(file):
             line_list.append(lines[1].strip('\n'))
 
-    for sentence in line_list:
-        x = ws1.stemSentence(sentence)
-        with open(stemmedtextoutput, 'a') as f:
-            answer = input("Do you want to retain old data? (Yes/No) ")
-            if answer == 'Yes':
-                print("Writing To Stemmed File...")
+    answer = input("Do you want to retain old data? (Yes/No) ")
+    if answer.lower() == 'yes':
+        print("Writing To Stemmed File...")
+        for sentence in line_list:
+            x = ws1.stemSentence(sentence)
+            with open(stemmedtextoutput, 'a') as f:
                 f.write(f"{x}\n")
-            else:
-                print("Erasing...")
+    else:
+        print("Erasing and Writing To Stemmed File...")
+        for sentence in line_list:
+            x = ws1.stemSentence(sentence)
+            with open(stemmedtextoutput, 'a') as f:
                 f.truncate(0)
-                print("Writing To Stemmed File...")
                 f.write(f"{x}\n")
 
     file.close()
