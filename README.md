@@ -6,6 +6,11 @@ About:<br>
 
 <img src="images/Audio-Waveforms-Featued-Image.jpg">
 
+<b>Instructions</b>:<br>
+First run this command on terminal
+<pre>python -m nltk.downloader all</pre>
+
+
 Tools Used:<br>
 - VSCode[IDE] : Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.<br>
 
