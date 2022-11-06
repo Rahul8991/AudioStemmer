@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Strip</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <h1>WELCOME TO POWER STRIP</h1>
+    <p>Power Strip is developed inorder to enhance the human voice into texts which is then stemmed for seperating the
+        root words.</p>
+    <button> Audio Analyzer</button>
+    <button><a href="{{ url_for('audiototext') }}">Audio To Text</a></button>
+    <button>Text Stemmer</button>
+    <button>Audio Stemmer</button>
+    <footer>
+        <div class="site-footer">
+            <div class="align-left">
+                <a id="ctl00_ctl00_AdvertiseLink" href="">Advertise </a><br>
+                <a id="ctl00_ctl00_PrivacyLink" href="">Privacy</a><br>
+                <a id="ctl00_ctl00_CookiePolicyLink" href="">Cookies</a><br>
+                <a id="ctl00_ctl00_TermsOfUseLink" href="">Terms of Use</a><br>
+                Last Updated 11 Nov 2022
+            </div>
+
+            <div class="align-center">
+
+
+
+                <div class="page-width">
+                    Layout: <a id="ctl00_ctl00_PageWidth_FixedT" title="Fixed width layout" rel="nofollow"
+                        class=" active" href="">fixed</a>
+                    |
+                    <a id="ctl00_ctl00_PageWidth_FluidT" title="Fluid layout" rel="nofollow" href="">fluid</a>
+                </div>
+
+
+
+            </div>
+
+            <div class="align-right">
+                Copyright © <a href="">Power Strip</a>, 2022-2022 <br>
+                All Rights Reserved.<br>
+                <br>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
