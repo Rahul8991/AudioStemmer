@@ -21,6 +21,7 @@ class audio_to_text:
                 print('Converting...')
                 text = self.r.recognize_google(audio_data=audio_text)
                 print(text)
+                print("returning text to main...")
             except:
                 print('Sorry.. something happened...')
 
@@ -38,3 +39,4 @@ class audio_to_text:
                 file1.write(f"{text}\n")
                 print("Closing File(Unstemmed)...")
                 file1.close()
+        return text

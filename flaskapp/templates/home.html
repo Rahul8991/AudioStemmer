@@ -11,12 +11,12 @@
 
 <body>
     <h1>WELCOME TO POWER STRIP</h1>
-    <p>Power Strip is developed inorder to enhance the human voice into texts which is then stemmed for seperating the
-        root words.</p>
-    <button> Audio Analyzer</button>
+    <p>Power Strip is designed to help clients get upperhand in analyzing audio based input.</p>
+
     <button><a href="{{ url_for('audiototext') }}">Audio To Text</a></button>
-    <button>Text Stemmer</button>
-    <button>Audio Stemmer</button>
+    <button><a href="{{ url_for('textstemmer') }}">Text Stemmer</a></button>
+    <button><a href="{{ url_for('sentimentanalysis') }}">Sentiment Analysis</a></button>
+
     <footer>
         <div class="site-footer">
             <div class="align-left">

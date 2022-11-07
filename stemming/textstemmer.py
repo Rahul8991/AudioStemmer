@@ -44,6 +44,7 @@ def stemIt(unstemmedtextoutput, stemmedtextoutput):
             x = ws1.stemSentence(sentence)
             with open(stemmedtextoutput, 'a') as f:
                 f.write(f"{x}\n")
+            return x
     else:
         print("Erasing and Writing To Stemmed File...")
         for sentence in line_list:
@@ -51,6 +52,7 @@ def stemIt(unstemmedtextoutput, stemmedtextoutput):
             with open(stemmedtextoutput, 'a') as f:
                 f.truncate(0)
                 f.write(f"{x}\n")
+            return x
 
     file.close()
     print("Closing File(Unstemmed)")

@@ -47,5 +47,7 @@ def sentiment_calculator(positivewordsfile, negativewordsfile, stemmedtextoutput
 
     if(ppercent > npercent):
         print("Positive Audio File")
+        return "Positive Audio File"
     else:
         print("Negative Audio File")
+        return "Negative Audio File"

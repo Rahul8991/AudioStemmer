@@ -10,9 +10,22 @@
 
 <body>
     <h1>Convert Audio To Text</h1>
-    <form action="">
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
+    <form method="post" action="#">
+        <label for="fname">File name:</label><br>
+        <input id="fname" type="text" name="fname" required><br>
+        <label for="formats">File Type:</label>
+        <select name="formats" id="lang" required>
+            <option value="">Select File Type</option>
+            <option value="wav">wav</option>
+            <option value="mp3">mp3</option>
+            <option value="mp4">mp4</option>
+        </select>
+        <!-- <a href="/audiototextscript" value="call_flask_function"><input type="submit" value="Convert"></a> -->
+        <input type="submit" value="Convert"><br>
+
+        <p>The converted test is: {{filename}}.{{format}} </p><br>
+        <p>This is the output from script/main.py: {{result}}</p>
+
     </form>
 </body>
 
