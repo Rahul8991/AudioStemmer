@@ -2,7 +2,7 @@
 Ongoing Project on sentiment analysis...
 
 About:<br>
-<b>POWER STRIP</b> is a tool used to analyze music, audio messages, textual content etc by harnessing NLP algorithms, providing a wide range of applications in music industry, social media and other related fields for enhancing user experience. <br>
+<b>POWER STRIP</b> is a tool used to analyze music, audio messages, textual content etc by harnessing NLP algorithms, providing a wide range of applications in music industry, social media, stock and crypto market and other related fields for enhancing user experience. <br>
 
 <img src="images/Audio-Waveforms-Featued-Image.jpg">
 
