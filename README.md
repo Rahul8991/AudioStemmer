@@ -1,5 +1,5 @@
 # PowerStrip 
-Ongoing Project on generating stemmed audio output ...
+Ongoing Project on sentiment analysis...
 
 About:<br>
 <b>POWER STRIP</b> is a tool used to analyze music, audio messages, textual content etc by harnessing NLP algorithms, providing a wide range of applications in music industry, social media and other related fields for enhancing user experience. <br>
