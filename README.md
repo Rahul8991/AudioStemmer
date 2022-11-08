@@ -1,14 +1,47 @@
-# AudioStemmer
+# PowerStrip 
 Ongoing Project on generating stemmed audio output ...
 
 About:<br>
-<b>Audio Stemmer</b> is developed inorder to enhance the human voice into texts which is then stemmed for seperating the root words. <br>
+<b>POWER STRIP</b> is a tool used to analyze music, audio messages, textual content etc by harnessing NLP algorithms, providing a wide range of applications in music industry, social media and other related fields for enhancing user experience. <br>
 
 <img src="images/Audio-Waveforms-Featued-Image.jpg">
 
 <b>Instructions</b>:<br>
-First run this command on terminal
+
+Step 1:
+Clone this repo <br>
+
+
+Step 2:
+If you are running for the first time, Run these commands on terminal. Make sure that you are on the parent directory  <br>
+
+-- Process 1: Downloading necessary libraries and adding script path to sys.path list
 <pre>python -m nltk.downloader all</pre>
+<pre>conda develop $(pwd)/scripts </pre>
+
+-- Process 2: Install all the requirements
+<pre>pip install -r requirements.txt</pre>
+
+Step 3:
+File to be executed for running Flask App: <b>flaskapp/app.py</b> <br>
+
+Execution Code
+<pre>python .\flaskapp\app.py</pre>
+
+Files and Folders<br>
+-- audio
+-- audioanalyzer
+-- audiototext
+-- flaskapp
+-- images
+-- scripts
+-- sentimentanalysis
+-- stemming
+-- temp
+
+
+
+
 
 
 Tools Used:<br>
