@@ -25,6 +25,7 @@ class audio_to_text:
             except:
                 print('Sorry.. something happened...')
 
+        print("Opening File...")
         with open(unstemmedtextoutput, 'a') as file1:
             answer = input("Do you want to retain old data? (Yes/No) ")
             if answer.lower() == 'yes':

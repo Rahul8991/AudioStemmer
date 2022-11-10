@@ -69,6 +69,14 @@ try:
         print("---------------------------------------------------")
         return stemmed
 
+    # def entityExtract(audio_file_name, audio_file_type):
+    #     textinput=audioToText(audio_file_name, audio_file_type)
+    #     print("-------------------Entity Extraction Process----------------")
+    #     entities = extractIt(unstemmedtextoutput, stemmedtextoutput)
+    #     print("Entity Extraction Process Finished...")
+    #     print("---------------------------------------------------")
+    #     return entities
+
     def sentimentAnalysis(audio_file_name, audio_file_type):
         textStemming(audio_file_name, audio_file_type)
         print("-----------------Sentiment Analysis--------------------")

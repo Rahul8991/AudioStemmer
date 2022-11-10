@@ -69,6 +69,20 @@ def sentimentanalysis():
             return render_template("404.html")
     return render_template('sentimentanalysis.html')
 
+# @app.route("/entityextraction/", methods=["POST", "GET"])
+# def entityextraction():
+#     if request.method == "POST":
+#         try:
+#             fname = request.form["fname"]
+#             formats = request.form["formats"]
+#             result = f"{fname}.{formats}"
+#             result = scripts.entityextraction(fname, formats)
+#             return render_template('entityextraction.html', filename=fname, format=formats, result=result)
+#         except Exception as e:
+#             print("Error!!!!", e)
+#             return render_template("404.html")
+#     return render_template('entityextraction.html')
+
 # @app.route("/audiostemmer")
 # def audiostemmer():
 #     return render_template('audiostemmer.html')
