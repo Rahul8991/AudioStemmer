@@ -36,6 +36,8 @@ Files and Folders<br>
 
 -- audiototext: Audio to Text output present in the output folder(.txt file)<br>
 
+-- entityextraction: Entity List present in this folder<br>
+
 -- sentimentanalysis: List of Positive words and Negative words should be uploaded/appended to the files folder(.txt files)<br>
 
 -- stemming: Unstemmed text to Stemmed text output present in the output folder(.txt file)<br>
