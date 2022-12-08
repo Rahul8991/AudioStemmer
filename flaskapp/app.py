@@ -14,7 +14,7 @@ print("syspath", sys.path[0])
 
 # tst = scripts.textStemmingTool()
 
-print("script running---->", scripts.do_calculation(2, 3))
+# print("script running---->", scripts.do_calculation(2, 3))
 
 BASE_DIR = os.getcwd()
 print(BASE_DIR)
